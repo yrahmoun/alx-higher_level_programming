@@ -2,6 +2,7 @@
 
 """ make an empty class """
 
+
 class Square:
     """ a class about a square """
     pass
