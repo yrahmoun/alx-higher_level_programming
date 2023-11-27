@@ -4,6 +4,7 @@
 
 class Rectangle:
     """ defines a rectangle """
+
     def __init__(self, width=0, height=0):
         """ initializes the rectangle 
         Args;
@@ -18,7 +19,7 @@ class Rectangle:
     def width(self):
         """ gets the width of the rectangle """
 
-        return self.width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -34,7 +35,7 @@ class Rectangle:
     def height(self):
         """ gets the height of the rectangle """
 
-        return self.height
+        return self.__height
     
     @height.setter
     def height(self, value):
