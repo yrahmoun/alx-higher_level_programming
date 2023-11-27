@@ -15,6 +15,10 @@ normal usage with floats:
 	>>> add_integer(2.5, 1.5)
 	3
 
+normal usage with both
+	>>> add_integer(1.5, 3)
+	4
+
 first arg is not an integer or float:
 	>>> add_integer("test", 3)
 	Traceback (most recent call last):
@@ -26,3 +30,18 @@ second arg is not an integer ot float:
 	Traceback (most recent call last):
 		...
 	TypeError: b must be an integer
+
+test with infinity only:
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+test with int and infinity:
+    >>> add_integer(5, float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+test with NaN numbers:
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
