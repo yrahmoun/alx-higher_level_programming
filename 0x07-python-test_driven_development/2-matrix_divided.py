@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ matrix deviding """
 
+
 def matrix_divided(matrix, div):
     """ divides all elements of the matrix
 
@@ -11,7 +12,6 @@ def matrix_divided(matrix, div):
     Returns:
         new matrix containing the results
     """
-
     new_matrix = []
     if not isinstance(matrix, list) or len(matrix) == 0:
         raise TypeError("matrix must be a matrix (list of lists) " +

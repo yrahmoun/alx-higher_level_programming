@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ module for sat_my_name """
 
+
 def say_my_name(first_name, last_name=""):
     """ prints full name
 
@@ -8,7 +9,6 @@ def say_my_name(first_name, last_name=""):
         first_name: argument one
         last_name: argument two
     """
-
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
     if not isinstance(last_name, str):
