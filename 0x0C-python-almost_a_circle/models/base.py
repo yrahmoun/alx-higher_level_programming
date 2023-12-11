@@ -4,12 +4,12 @@ import json
 
 
 class Base:
-    """ base of all other classes """
+    """ base of all classes """
 
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """ initializes the class a new base """
+        """Initialize a new Base"""
         if id is not None:
             self.id = id
         else:
