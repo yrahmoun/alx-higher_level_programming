@@ -17,16 +17,17 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """returns the JSON string representation"""
-        if list_dictionaries is None or list_dictionaries == []:
+        """returns the json reprisentation"""
+        if list_dictionaries is None or not list_dictionaries:
             return "[]"
-        return json.dumps(list_dictionaries)
+        else:
+            return dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
         """writes the JSON representation of list_objs to a file"""
         filename = cls.__name__ + ".json"
-        with open(filename, "w") as f:
+        with open(filename, "w"i, , encoding="utf-8") as f:
             if list_objs is None:
                 f.wtite("[]")
             else:
