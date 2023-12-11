@@ -37,7 +37,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """returns the list of the JSON representation json_string"""
+        """returns a list of the JSON representation json_string"""
         if json_string is None or not json_string:
             return []
         return json.loads(json_string)
@@ -60,8 +60,7 @@ class Base:
         try:
             with open(filename, 'r') as f:
                 json_string = f.read()
-                obj_dicts = Base.from_json_string(json_string)
-                return [cls.create(**obj_dict) for obj_dict in obj_dicts]
+                o_dicts = Base.from_json_string(json_string)
+                return [cls.create(**o_dict) for o_dict in o_dicts]
         except FileNotFoundError:
             return []
-
