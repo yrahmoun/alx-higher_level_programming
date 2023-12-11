@@ -18,7 +18,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """returns the json reprisentation"""
+        """returns the json representation"""
         if list_dictionaries is None or not list_dictionaries:
             return "[]"
         else:
@@ -47,7 +47,7 @@ class Base:
         """returns an instance with all attributes already set"""
         if dictionary and dictionary != []:
             if cls.__name__ == "Rectangle":
-                inst = cls(1,1)
+                inst = cls(1, 1)
             else:
                 inst = cls(1)
             inst.update(**dictionary)
