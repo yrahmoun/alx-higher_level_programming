@@ -27,7 +27,7 @@ class Base:
     def save_to_file(cls, list_objs):
         """writes the JSON representation of list_objs to a file"""
         filename = cls.__name__ + ".json"
-        with open(filename, "w"i, , encoding="utf-8") as f:
+        with open(filename, "w", encoding="utf-8") as f:
             if list_objs is None:
                 f.wtite("[]")
             else:
