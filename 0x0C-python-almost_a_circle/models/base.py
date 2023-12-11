@@ -7,6 +7,7 @@ class Base:
     """ base of all other classes """
 
     __nb_objects = 0
+
     def __init__(self, id=None):
         """ initializes the class a new base """
         if id is not None:
